@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { loggin } from "../Redux/Reducers/LoginStatus";
+import './Auth.css';
 
 function Login() {
   const user = useSelector((state) => state.users.users);
@@ -25,17 +26,21 @@ function Login() {
         <h2>Login to use TODO</h2>
         <label htmlFor="username">
           Username:
+          <br />
           <input type="text" id="username" />
         </label>
+        <br />
         <label htmlFor="password">
           Password:
+          <br />
           <input type="text" id="password" />
+          <br />
         </label>
         <button type="submit">Login</button>
       </form>
       <p>
         Dont have an Account ?<br />
-        <Link>SignUp</Link>
+        <Link to={'/signup'}>SignUp</Link>
       </p>
     </div>
   );

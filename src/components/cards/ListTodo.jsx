@@ -18,7 +18,7 @@ function ListTodo() {
     <div className="conatiner">
       {Todos.map((todo, index) => (
         <div className="list-item" key={index}>
-          {(todo.editkey) ? (
+          {todo.editkey ? (
             <>
               <p>{todo.value}</p>
 
@@ -26,17 +26,17 @@ function ListTodo() {
                 className="delete"
                 onClick={() => dispatch(editTodos(todo.id))}
               >
-                edit
+                <i className="fa-solid fa-pen-to-square"></i>
               </button>
               <button onClick={() => dispatch(deleteTodos(todo.id))}>
-                dlt
+                <i className="fa-solid fa-trash"></i>
               </button>
             </>
           ) : (
             <>
               <input type="text" ref={todoRef} placeholder={todo.value} />{" "}
               <button type="button" onClick={() => save(todo.id)}>
-                save
+                <i className="fa-solid fa-circle-check"></i>
               </button>
             </>
           )}

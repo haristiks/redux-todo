@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { addUser } from "../Redux/Reducers/UserReducer";
 import { useDispatch } from "react-redux";
+import './Auth.css';
 
 function Register() {
   const dispatch = useDispatch();
@@ -20,21 +21,27 @@ function Register() {
         <h2>Register Here</h2>
         <label htmlFor="name">
           Name:
+          <br />
           <input type="text" id="name" />
         </label>
+        <br />
         <label htmlFor="username">
           Username:
+          <br />
           <input type="text" id="username" />
         </label>
+        <br />
         <label htmlFor="password">
           Password:
+          <br />
           <input type="text" id="password" />
         </label>
+        <br />
         <button type="submit">Register</button>
       </form>
       <p>
         allredy have an Account ?<br />
-        <Link>Login</Link>
+        <Link to={'/'}>Login</Link>
       </p>
     </div>
   );
