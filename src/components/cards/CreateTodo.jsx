@@ -14,7 +14,7 @@ function CreateTodo() {
     <div className="container">
       <form action="" onSubmit={add}>
         <h1>ADD TODO</h1>
-        <input type="text" id="add" />
+        <input type="text" id="add" required />
         <button type="submit" className="btnAdd">
           <i className="fa-solid fa-circle-check"></i>
         </button>

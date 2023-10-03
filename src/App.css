@@ -67,3 +67,10 @@
 .read-the-docs {
   color: #888;
 }
+
+#editinput{
+    border-radius: 5px;
+    border: 1.5px solid black;
+    padding: 5px 20px;
+    margin-left: 20px;
+}

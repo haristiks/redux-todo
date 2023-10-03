@@ -12,6 +12,7 @@ function Register() {
     const Username=e.target.username.value;
     const Password=e.target.password.value;
     dispatch(addUser({name:Name,username:Username,password:Password}))
+    alert("User Registration Successfull")
     e.target.reset()
   };
 

@@ -14,9 +14,12 @@ function ListTodo() {
     const editedTodo = todoRef.current.value;
     dispatch(saveTodos({ id: id, value: editedTodo }));
   };
+
+  const revTodo=Todos.map(item=>item).reverse()
+  
   return (
     <div className="conatiner">
-      {Todos.map((todo, index) => (
+      {revTodo.map((todo, index) => (
         <div className="list-item" key={index}>
           {todo.editkey ? (
             <>
@@ -34,7 +37,7 @@ function ListTodo() {
             </>
           ) : (
             <>
-              <input type="text" ref={todoRef} placeholder={todo.value} />{" "}
+              <input type="text" ref={todoRef} placeholder={todo.value} id="editinput"  />{" "}
               <button type="button" onClick={() => save(todo.id)}>
                 <i className="fa-solid fa-circle-check"></i>
               </button>
